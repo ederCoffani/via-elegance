@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Via Elegance](viaelegance.png)
 
-Things you may want to cover:
+Projetinho criado para a empresa Via Elegance, empresa de roupas intimas
 
-* Ruby version
+Projeto consiste em um webapp para a empresa onde trabalho, projeto ainda em execução.
 
-* System dependencies
+Para consegui subir o projetinho e ver funcionando...
 
-* Configuration
+Você tem que ter o Ruby '2.5.3', Rails '~> 5.2.1' e por ultimo ter postgreSql instalado e configurar ele.
 
-* Database creation
+depois só dar um bundle install e navegar no pequeno site.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A tecnologia de design: framework materialize.
