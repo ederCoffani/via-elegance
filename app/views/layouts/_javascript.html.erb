@@ -1,0 +1,71 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+</script>
+
+<script >
+
+      document.addEventListener("turbolinks:before-cache", function() {  jQuery('.button-collapse').sideNav('destroy'); });
+
+      $(document).ready(function(){
+        $(".button-collapse").sideNav();
+        $('.parallax').parallax();
+      });
+
+      document.addEventListener('turbolinks:load', function() { elem = document.querySelectorAll('.slider'); instance = new M.Sidenav(elem, {}); });
+      document.addEventListener('turbolinks:before-visit', function() { elem = document.querySelectorAll('.slider'); instance = M.Sidenav.getInstance(elem, options);
+        if (instance){ instance.destroy(); }
+      });
+
+      $(document).ready(function(){ $('.slider').slider(); });
+
+</script>
+<script>
+    var $doc = $('html, body');
+    $('.container').click(function() {
+        $doc.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
+    });
+</script>
+<script >
+    $('.navbar a[href^="#"]').on('click', function(e) {
+      e.preventDefault();
+      var id = $(this).attr('href'),
+      targetOffset = $(id).offset().top;
+
+      $('html, body').animate({
+        scrollTop: targetOffset - 100
+      }, 500);
+    });
+
+</script>
+<script>
+  // Open
+  $('.gallery-expand').galleryExpand('open');
+
+  // Close
+  $('.gallery-expand').galleryExpand('close');
+
+  var $masonry = $('.gallery');
+$masonry.masonry({
+  // set itemSelector so .grid-sizer is not used in layout
+  itemSelector: '.gallery-item',
+  // use element for option
+  columnWidth: '.gallery-item',
+  // no transitions
+  transitionDuration: 0
+});
+
+// layout Masonry after each image loads
+$masonry.imagesLoaded(function() {
+  $masonry.masonry('layout');
+});
+</script>

@@ -1,0 +1,2 @@
+class Colection < ApplicationRecord
+end

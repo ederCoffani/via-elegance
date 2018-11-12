@@ -1,0 +1,21 @@
+<h1>Ligeries</h1>
+
+<% @colections.each do |colection|%>
+  <div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter bigbang">
+    <div class="gallery-curve-wrapper">
+
+      <a class="gallery-cover gray">
+        <%= image_tag colection.url_image, size: "100x100", class: "responsive-img", alt: "placeholder"  %>
+      </a>
+
+      <div class="gallery-header">
+        <span><%= colection.name %> </span>
+      </div>
+
+      <div class="gallery-header">
+        <span><%= colection.descriptions%> </span>
+      </div>
+
+    </div>
+  </div>
+<% end %>
